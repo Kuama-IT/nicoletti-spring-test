@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "5ec8b586-2d45-440e-82c0-334f9a6130b5",
+		"name": "Vegans Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14180808"
+	},
+	"item": [
+		{
+			"name": "Test Endpoint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"maximumPackageWeight\": 90,\n    \"items\": [\n        {\n            \"id\": 1,\n            \"weight\": 90,\n            \"price\": 99\n        },\n        {\n            \"id\": 2,\n            \"weight\": 90,\n            \"price\": 89\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/build-package",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"build-package"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
